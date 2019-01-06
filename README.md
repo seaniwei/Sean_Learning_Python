@@ -1,6 +1,7 @@
 # Sean Python 學習課程教材
 Learning Python tutorials and materials<br>
 <h2>Table of Contents 目錄</h2><br>
+<h3>Table of Contents 目錄</h3><br>
 <h3>Part 1: Basics</h3><br>
 <strong>Part 1: Basics</strong><br>
 Control Flow Statements<br>
