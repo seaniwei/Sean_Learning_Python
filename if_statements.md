@@ -8,9 +8,14 @@ if 敘述是最常用的控制流程判斷式，以下是 if 敘述的內容和�
 
 ```Python
 if condition expression:
-   statement(s)
+	statement(s)
 elif condition expression:
-   statement(s)
+	statement(s)
 else:
-   statement(s)
+	statement(s)
+```
+<h3>if Statements 結構：</h3>
+<h4>if</h4>
+<h4>condition express</h4>
+<h4>:</h4>
 
