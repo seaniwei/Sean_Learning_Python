@@ -4,10 +4,11 @@ Learning Python tutorials and materials<br>
 <h3>Part 1: Basics</h3>
 <strong>Control Flow Statements</strong><br>
 <ul>
-	<li><a href="control_flow.md">Control Flow Statements: if, for, while</a></li>
-	<li>Data Structures: Lists, Tuples, Set, Dictionaries</li>
+	<li><a href="if_statements.md">if Statements</a></li>
+	<li>for Statements</li>
+	<li>while Statements</li>
 </ul>
 <strong>Control Flow Statements</strong>
 <h3>Part 2: Advanced</strong></h3>
-<strong>NumPy</strong><br>
+<strong>NumPy</strong>
 <strong>Pandas</strong><br>
