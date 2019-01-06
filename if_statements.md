@@ -19,3 +19,6 @@ else:
 <strong>if</strong> - if 敘述關鍵字，必要。<br>
 <strong>condition express</strong> - 條件判斷式，必要。<br>
 <strong>:</strong> - Python 敘述結尾符號，必要。<br>
+<strong>statement(s)</strong> - 若符合條件時要執行的動作，必須縮排，必要。<br>
+<strong>elif</strong> - 若 if 的條件不符合，就再判斷這個條件，非必要。<br>
+<strong>else</strong> - 若前述的條件統統都不符合，就執行這裡的動作，非必要。<br>
