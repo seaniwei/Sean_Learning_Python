@@ -29,6 +29,6 @@ if 5 > 2:   # 如果 (5 > 2)，則印出 "5 > 2 為真(True)"
 	print("5 > 2 為真(True)")
 ```
 
-5 > 2 就是 condition express(條件判斷式)，這個判斷式的結果若為真(True)/成立，就是條件符合，則會執行 print("5 > 2 為真(True)") 這個 statement(s)(動作敘述)；若結果是偽(False)/假/不成立，就是條件不符合，則不執行其動作敘述。<br>
-和Java不同，Python的 condition express(條件判斷式)不需要加上小括號，加了也沒關係。<br>
-condition express(條件判斷式)的內容是由：<strong>運算元</strong>及<strong>關係運算子 / 邏輯運算子</strong> 所組成。前述例子的 5 > 2，5和2就是運算元，是被運算判斷的元素； > (大於)是關係運算子。接下來要介紹關係運算子和邏輯運算子。<br>
+5 > 2 就是 condition express(條件判斷式)，這個判斷式的結果若為真(True)/成立，就是條件符合，則會執行 print("5 > 2 為真(True)") 這個 statement(s)(動作敘述)；若結果是偽(False) / 假 / 不成立，就是條件不符合，則不執行其動作敘述。<br>
+和Java不同，Python的 condition express(條件判斷式)外小括號是非必要的，加了也沒關係。<br>
+condition express(條件判斷式)的內容是由： <strong>運算元</strong> 及 <strong>關係運算子 / 邏輯運算子</strong> 所組成。前述例子的 5 > 2，5 和 2 就是運算元，是被運算判斷的元素； > (大於)是關係運算子。接下來要介紹關係運算子和邏輯運算子。<br>
