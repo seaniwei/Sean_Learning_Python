@@ -2,7 +2,7 @@
 Learning Python tutorials and materials<br>
 <h2>Table of Contents 目錄</h2>
 <h3>Part 1: Basics</h3>
-<strong>Control Flow Statements</strong><br>
+<h4>Control Flow Statements</h4>
 <ul>
 	<li><a href="if_statements.md">if Statements</a></li>
 	<li>for Statements</li>
