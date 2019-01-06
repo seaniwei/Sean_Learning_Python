@@ -10,5 +10,5 @@ Learning Python tutorials and materials<br>
 </ul>
 <strong>Data Structures</strong>
 <h3>Part 2: Advanced</strong></h3>
-<strong>NumPy</strong><br>
-<strong>Pandas</strong><br>
+<h4>NumPy</h4>
+<h4>Pandas</h4>
