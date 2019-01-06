@@ -8,7 +8,7 @@ Learning Python tutorials and materials<br>
 	<li>for Statements</li>
 	<li>while Statements</li>
 </ul>
-<strong>Control Flow Statements</strong>
+<strong>Data Structures</strong>
 <h3>Part 2: Advanced</strong></h3>
-<strong>NumPy</strong>
+<strong>NumPy</strong><br>
 <strong>Pandas</strong><br>
