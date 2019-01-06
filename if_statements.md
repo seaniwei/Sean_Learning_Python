@@ -16,8 +16,7 @@ else:
 	statement(s)
 ```
 <h3>結構說明：</h3>
-<h4>if</h4>
-if 敘述關鍵字，必要。<br>
+<strong>if</strong> if 敘述關鍵字，必要。<br>
 <h4>condition express</h4>
 條件判斷式，必要。<br>
 <h4>:</h4>
