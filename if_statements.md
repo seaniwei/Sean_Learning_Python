@@ -6,6 +6,7 @@ Learning Python tutorials and materials<br>
 處理（控制）流程 + 資料：就是程式！<br>
 if 敘述是最常用的控制流程判斷式，以下是 if 敘述的內容和結構。<br>
 <h3>if 敘述：</h3>
+
 ```Python
 if condition expression:
 	statement(s)
@@ -16,6 +17,8 @@ else:
 ```
 <h3>結構說明：</h3>
 <h4>if</h4>
-<h4>condition express</h4>條件判斷式
+if 敘述關鍵字，必要。<br>
+<h4>condition express</h4>
+條件判斷式，必要。<br>
 <h4>:</h4>
-
+Python 敘述結尾符號，必要。<br>
