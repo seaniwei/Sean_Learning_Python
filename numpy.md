@@ -1,5 +1,6 @@
 # Chapter: NumPy - [Sean Python 學習課程教材]
-NumPy (Numerical Python, pronounced /ˈnʌmpaɪ/) 是Python很基礎且重要的擴充程式庫，提供強大的多維陣列與矩陣運算功能。
+NumPy (Numerical Python, pronounced /ˈnʌmpaɪ/)：Python很基礎且重要的擴充程式庫，提供強大的多維陣列與矩陣運算功能。
+
 ### 單元目標
 - NumPy簡介
 - 套件安裝
