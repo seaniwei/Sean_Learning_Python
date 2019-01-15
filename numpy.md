@@ -58,13 +58,13 @@ print(a1.itemsize)  # the size in bytes of each element --> 8
 print(a3.itemsize)  # the size in bytes of each element --> 8
 ```
 
-**zeros()** 用來建立零矩陣，參數放入各軸長度(shape)，即可建立該維度的零矩陣，預設是浮點數 0，可以用 dtype=int 參數設定為整數。<br>
-**ones()** 用來建立元素均為 1 的矩陣，預設是浮點數 1。<br>
-**eye()** 用來建立對角元素皆為1，其他元素皆為零的單位矩陣(identity matrix)，預設是浮點數。<br>
-**full()** 用來建立元素均相同的矩陣。<br>
-**random.random()** 可建立元素為隨機值的矩陣。<br>
-**arange([start,]stop,[step,]dtype=None)** 可產生指定間隔的數列：start 為起始值，預設為 0，stop 為終值，step 為間隔值。<br>
-**linspace(start,stop,num=50,endpoint=True,retstep)** 在2數間產生指定個數的相同間隔數列：start 為起始值，stop 為終值，num 為數列個數，endpoint 為是否包含終值，預設為 True (包含)，retstep 是否回傳間隔值。<br>
+**zeros()** 用來建立零矩陣，參數放入各軸長度(shape)，即可建立該維度的零矩陣，預設是浮點數 0，可以用 dtype=int 參數設定為整數。<br><br>
+**ones()** 用來建立元素均為 1 的矩陣，預設是浮點數 1。<br><br>
+**eye()** 用來建立對角元素皆為1，其他元素皆為零的單位矩陣(identity matrix)，預設是浮點數。<br><br>
+**full()** 用來建立元素均相同的矩陣。<br><br>
+**random.random()** 可建立元素為隨機值的矩陣。<br><br>
+**arange([start,]stop,[step,]dtype=None)** 可產生指定間隔的數列：start 為起始值，預設為 0，stop 為終值，step 為間隔值。<br><br>
+**linspace(start,stop,num=50,endpoint=True,retstep)** 在2數間產生指定個數的相同間隔數列：start 為起始值，stop 為終值，num 為數列個數，endpoint 為是否包含終值，預設為 True (包含)，retstep 是否回傳間隔值。<br><br>
 **reshape(a,newshape)** 改變矩陣的 shape 維度：a 為要改變的矩陣，newshape 為改變後的 shape 維度。<br>
 
 ```python
