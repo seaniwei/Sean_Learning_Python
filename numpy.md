@@ -29,8 +29,9 @@ a2 = np.array([[1,2,3],[4,5,6]])   # Create a rank 2 array
 print(a1)
 print(a2)
 ```
-a1是一維陣列，a2是 2×3 的2維陣列，第一個軸(axis)的長度是2，第二個軸(axis)的長度是3。
-ndarray 有 ndim(維度)、shape(各軸長度)、size(元素數量)、dtype(元素資料型態)、itemsize(元素資料型態的位元大小)等屬性。
+a1 是一維陣列，a2 是 2×3 的2維陣列，a2第一個軸(axis)的長度是2，第二個軸(axis)的長度是3。<br>
+ndarray 有 ndim(維度)、shape(各軸長度)、size(元素數量)、dtype(元素資料型態)、itemsize(元素資料型態的位元大小)等屬性。<br>
+
 ```python
 import numpy as np
 a1 = np.array([1,2,3])             # Create a rank 1 array
