@@ -6,7 +6,7 @@ NumPy (Numerical Python, pronounced /ˈnʌmpaɪ/)：是Python很基礎且重要�
 - 套件安裝
 - 建立陣列
 - 讀取陣列
-- 索引與排序
+- 基本運算
 
 ### NumPy簡介
 - NumPy的核心是 "ndarray" - 多維陣列(multi-dimensional array; n-dimensional)資料型態。
@@ -89,8 +89,8 @@ a17 = np.arange(24).reshape(2,3,4)  # Create a 2x3x4 3d array
 ```
 
 ### 讀取陣列
-NumPy ndarray 可如同 Python lists 串列以索引(index)進行 indexing 和 slicing 並存取元素。
-slice 產生的陣列是原陣列的 view，修改會影響原陣列。
+NumPy ndarray 可如同 Python lists 串列以索引(index)進行 indexing 和 slicing 並存取元素。<br>
+slice 產生的陣列是原陣列的 view，修改會影響到原陣列。
 
 ```python
 # One-dimensional arrays indexing, slicing
@@ -123,7 +123,46 @@ print(a)
 ```
 
 ### 基本運算
+elementwise 的矩陣數學運算及矩陣乘積(matrix product/inner products)。<br>
+和 MATLAB 及一般矩陣運算不同，在 NumPy 中 * 是 elementwise multiplication，@ 運算子(python >= 3.5) 和 dot() 才是矩陣乘積(matrix product/inner products)。<br>
 
+```python
+# Elementwise array arithmetic operations
+import numpy as np
+a = np.array([[4,4],[2,2]])
+b = np.array([[2,2],[1,1]])
+
+# Elementwise sum
+print(a + b)
+print(np.add(a, b))
+
+# Elementwise difference
+print(a - b)
+print(np.subtract(a, b))
+
+# Elementwise product
+print(a * b)
+print(np.multiply(a, b))
+
+# Elementwise division
+print(a / b)
+print(np.divide(a, b))
+
+10*np.sin(a)
+
+a<35
+```
+
+```python
+# matrix product
+import numpy as np
+A = np.array([[1,1],[0,1]] )
+B = np.array([[2,0],[3,4]] )
+print(A * B)        # elementwise product
+print(A @ B)        # matrix product with @
+print(A.dot(B))     # matrix product with dot()
+print(np.dot(A, B)) # matrix product
+```
 
 ## References 參考資料
 - NumPy developers documentation-The SciPy community, http://www.numpy.org
