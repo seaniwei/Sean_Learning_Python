@@ -123,8 +123,8 @@ print(a)
 ```
 
 ### 基本運算
-elementwise 的矩陣數學運算及矩陣乘積(matrix product/inner products)。<br>
-和 MATLAB 及一般矩陣運算不同，在 NumPy 中 * 是 elementwise multiplication，@ 運算子(python >= 3.5) 和 dot() 才是矩陣乘積(matrix product/inner products)。<br>
+elementwise 的矩陣數學運算及矩陣乘積(matrix product)。<br>
+和 MATLAB 及一般矩陣運算不同，在 NumPy 中 * 是 elementwise multiplication，使用 @ 運算子(python >= 3.5) 和 dot() 才是矩陣乘積(matrix product)。<br>
 
 ```python
 # Elementwise array arithmetic operations
@@ -156,12 +156,12 @@ a<35
 ```python
 # matrix product
 import numpy as np
-A = np.array([[1,1],[0,1]] )
-B = np.array([[2,0],[3,4]] )
-print(A * B)        # elementwise product
-print(A @ B)        # matrix product with @
-print(A.dot(B))     # matrix product with dot()
-print(np.dot(A, B)) # matrix product
+a = np.array([[1,1],[0,1]])
+b = np.array([[2,0],[3,4]])
+print(a * b)        # elementwise product
+print(a @ b)        # matrix product with @
+print(a.dot(b))     # matrix product with dot()
+print(np.dot(a, b)) # matrix product with dot()
 ```
 
 ## References 參考資料
