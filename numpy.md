@@ -59,14 +59,23 @@ print(a3.itemsize)  # the size in bytes of each element --> 8
 ```
 
 **zeros()** 用來建立零矩陣，參數放入各軸長度(shape)，即可建立該維度的零矩陣，預設是浮點數 0，可以用 dtype=int 參數設定為整數。<br>
-**ones()** 則用來建立內容均為 1 的矩陣。
+**ones()** 用來建立元素均為 1 的矩陣，預設是浮點數 1。<br>
+**eye()** 用來建立對角元素皆為1，其他元素皆為零的單位矩陣(identity matrix)，預設是浮點數。<br>
+**full()** 用來建立元素均相同的矩陣。<br>
+**random.random()** 可建立元素隨機值的矩陣。<br>
 
 ```python
 import numpy as np
-a1 = np.zeros(5)
-a2 = np.zeros((3,4),dtype=int)
+a1 = np.zeros(3)
+a2 = np.zeros((2,3),dtype=int)
+a3 = np.eye(3)                # Create a 3x3 identity matrix
+a4 = np.full((2,2),5)         # Create a constant array
+a5 = np.random.random((2,2))  # Create an array filled with random values
 print(a1)
 print(a2)
+print(a3)
+print(a4)
+print(a5)
 ```
 ## References 參考資料
 - NumPy developers documentation-The SciPy community, http://www.numpy.org
