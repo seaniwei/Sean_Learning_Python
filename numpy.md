@@ -89,13 +89,37 @@ a17 = np.arange(24).reshape(2,3,4)  # Create a 2x3x4 3d array
 ```
 
 ### 讀取陣列
-NumPy ndarray 可以如同 Python lists 串列進行 indexing 和 slicing 並存取元素。
+NumPy ndarray 可如同 Python lists 串列以索引(index)進行 indexing 和 slicing 並存取元素。
 
 ```python
-
+# One-dimensional arrays indexing, slicing
+import numpy as np
+a = np.arange(10)
+a[2]
+a[2:5]
+a[0:10:2] = -10  # set every 2nd element to -10
+a[ : :-1]        # reverse 反轉
 ```
-
-
+```python
+# Multidimensional arrays
+import numpy as np
+a = np.arange(20).reshape((5,4))
+print(a)
+print(a[2,3])
+print(a[0:5, 1])  # each row in column 1
+print(a[:, 1])    # each row in column 1
+print(a[1:3, :])  # row 1~2
+print(a[-1])      # the last row. Equivalent to a[-1, :]
+```
+```python
+# A slice of an array is a view into the same data, so modifying it will modify the original array.
+import numpy as np
+a = np.arange(20).reshape((5,4))
+b = a[:2, 1:3]
+print(b)
+b[0, 0] = 99
+print(a)
+```
 ## References 參考資料
 - NumPy developers documentation-The SciPy community, http://www.numpy.org
 - NumPy Wikipedia, https://en.wikipedia.org/wiki/NumPy
