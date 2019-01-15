@@ -29,21 +29,21 @@ a2 = np.array([[1,2,3],[4,5,6]])   # Create a rank 2 array
 print(a1)
 print(a2)
 ```
-a1 是一維陣列，a2 是 2×3 的2維陣列，a2第一個軸(axis)的長度是2，第二個軸(axis)的長度是3。<br>
-ndarray 有 ndim(維度)、shape(各軸長度)、size(元素數量)、dtype(元素資料型態)、itemsize(元素資料型態的位元大小)等屬性。<br>
-
+a1 是一維陣列，a2 是 2×3 的2維陣列，a2 第一個軸(axis)的長度是2，第二個軸(axis)的長度是3。<br><br>
+ndarray 有 ndim(維度)、shape(各軸長度)、size(元素數量)、dtype(元素資料型態)、itemsize(元素資料型態的位元大小)等屬性。<br><br>
+可以 ndarray.ndim 方式取得，以下列子註解後方是輸出結果。<br><br>
 ```python
 import numpy as np
 a1 = np.array([1,2,3])             # Create a rank 1 array
 a2 = np.array([[1,2,3],[4,5,6]])   # Create a rank 2 array
-print(a1.ndim)      # axes, dimensions
-print(a2.ndim)      # axes, dimensions
-print(a1.shape)     # the length of each axes
-print(a2.shape)     # the length of each axes
-print(a1.size)      # the total number of elements
-print(a2.size)      # the total number of elements
-print(a1.dtype)     # the type of the elements in the array
-print(a1.itemsize)  # the size in bytes of each element
+print(a1.ndim)      # axes/dimensions --> 1
+print(a2.ndim)      # axes/dimensions --> 2
+print(a1.shape)     # the length of each axes --> (3,)
+print(a2.shape)     # the length of each axes --> (2,3)
+print(a1.size)      # the total number of elements --> 3
+print(a2.size)      # the total number of elements --> 6
+print(a1.dtype)     # the type of the elements in the array --> int64
+print(a1.itemsize)  # the size in bytes of each element --> 8
 ```
 
 ## References 參考資料
