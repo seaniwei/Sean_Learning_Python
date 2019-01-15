@@ -164,6 +164,17 @@ print(a.dot(b))     # matrix product with dot()
 print(np.dot(a, b)) # matrix product with dot()
 ```
 
+```python
+# sum(), max(), min()
+import numpy as np
+a = np.arange(10).reshape((2,5))
+print(a)
+print(a.sum())  # 元素加總
+print(a.max())  # 最大元素
+print(a.min())  # 最小元素
+
+```
+
 ## References 參考資料
 - NumPy developers documentation-The SciPy community, http://www.numpy.org
 - NumPy Wikipedia, https://en.wikipedia.org/wiki/NumPy
