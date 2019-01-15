@@ -35,9 +35,9 @@ print(a3)
 print(a4)
 ```
 
-a1 中放入 tuple，a2 放入 list 都會產生一維陣列，a3 是 2x3 的2維陣列，a2 第一個軸(axis)的長度是2，第二個軸(axis)的長度是3。a4 是 3x2 的2維陣列。注意 ndarray 是同質，所以 a4 中的資料都轉成了浮點數。<br>
-ndarray 有 ndim(維度)、shape(各軸長度)、size(元素數量)、dtype(元素資料型態)、itemsize(元素資料型態的位元大小)等屬性。<br>
-可以 ndarray.ndim 方式取得，以下範例註解後方是輸出結果。<br>
+a1 中放入 tuple，a2 放入 list 都會產生一維陣列，a3 是 2x3 的2維陣列，a2 第一個軸(axis)的長度是2，第二個軸(axis)的長度是3。a4 是 3x2 的2維陣列。<br>
+注意 ndarray 是同質，所以 a4 中的資料都轉成了浮點數。<br>
+ndarray 有 ndim(維度)、shape(各軸長度)、size(元素數量)、dtype(元素資料型態)、itemsize(元素資料型態的位元大小)等屬性。可以 ndarray.ndim 方式取得，以下範例註解後方是輸出結果。
 
 ```python
 import numpy as np
