@@ -1,5 +1,5 @@
 # Chapter: NumPy - [Sean Python 學習課程教材]
-NumPy (Numerical Python, pronounced /ˈnʌmpaɪ/)：是Python很基礎且重要的擴充程式庫，提供強大且豐富的多維陣列與矩陣運算功能，可處理大量的多維陣列，進行線性代數、傅立葉轉換、統計分析等，並有優異的執行效能。
+NumPy (Numerical Python, pronounced /ˈnʌmpaɪ/)：是Python很基礎且重要的擴充程式庫，提供強大且豐富的多維陣列與矩陣運算功能，可處理大量的多維陣列，進行線性代數、傅立葉轉換、統計分析等，並且有優異的執行效能。
 
 ### 單元目標
 - NumPy簡介
@@ -11,8 +11,8 @@ NumPy (Numerical Python, pronounced /ˈnʌmpaɪ/)：是Python很基礎且重要�
 ### NumPy簡介
 - NumPy的核心是 "ndarray" - 多維陣列(multi-dimensional array; n-dimensional)資料型態。
 - NumPy ndarray 和 Python lists 串列不同處在於，ndarray 同質且固定大小。
-- ndarray 建立時就固定大小，不像 Python lists 是動態的，ndarray 改變大小就會建立一個新 ndarray 物件。
-- 在 ndarray 物件中的元素為相同的資料型態。
+- ndarray 在建立時就固定大小，不像 Python lists 是動態的，ndarray 改變大小就會建立一個新 ndarray 物件。
+- 在 ndarray 物件中的元素均為相同的資料型態。
 - 在處理大量的資料時，NumPy 比 Python 內建序列資料型態更有效率且更方便。
 - 因此 NumPy ndarray 被許多 Python 套件當作基礎的處理資料型態而被廣泛運用。
 
@@ -36,8 +36,8 @@ print(a4)
 ```
 
 a1 中放入 tuple，a2 放入 list 都會產生一維陣列，a3 是 2x3 的2維陣列，a2 第一個軸(axis)的長度是2，第二個軸(axis)的長度是3。a4 是 3x2 的2維陣列。<br>
-注意 ndarray 是同質，所以 a4 中的資料都轉成了浮點數。<br>
-ndarray 有 ndim(維度)、shape(各軸長度)、size(元素數量)、dtype(元素資料型態)、itemsize(元素資料型態的位元大小)等屬性。可以 ndarray.ndim 方式取得，以下範例註解後方是輸出結果。
+注意 ndarray 是同質，所以 a4 中的所有元素都轉成了浮點數資料型態。<br>
+ndarray 有 ndim(維度)、shape(各軸長度)、size(元素數量)、dtype(元素資料型態)、itemsize(元素資料型態的位元大小)等屬性。可用 ndarray.ndim 方式取得，以下範例註解後方是輸出結果。
 
 ```python
 import numpy as np
@@ -65,7 +65,9 @@ print(a3.itemsize)  # the size in bytes of each element --> 8
 **random.random()** 可建立元素為隨機值的矩陣。<br><br>
 **arange([start,]stop,[step,]dtype=None)** 可產生指定間隔的數列：start 為起始值，預設為 0，stop 為終值，step 為間隔值。<br><br>
 **linspace(start,stop,num=50,endpoint=True,retstep)** 在2數間產生指定個數的相同間隔數列：start 為起始值，stop 為終值，num 為數列個數，endpoint 為是否包含終值，預設為 True (包含)，retstep 是否回傳間隔值。<br><br>
-**reshape(a,newshape)** 改變矩陣的 shape 維度：a 為要改變的矩陣，newshape 為改變後的 shape 維度。<br>
+**reshape(a,newshape)** 改變矩陣的 shape 維度：a 為要改變的矩陣，newshape 為改變後的 shape 維度。<br><br>
+**ravel(a)** 攤平矩陣，由多維陣列變一維陣列：a 為要攤平的矩陣。<br><br>
+**ravel(a)** 攤平矩陣，由多維陣列變一維陣列：a 為要攤平的矩陣。<br><br>
 
 ```python
 import numpy as np
@@ -86,11 +88,13 @@ a14 = np.arange(6).reshape((3,2))
 a15 = np.reshape(a14,(2,3))
 a16 = np.reshape(a15,6)
 a17 = np.arange(24).reshape(2,3,4)  # Create a 2x3x4 3d array
+a18 = np.ravel(a17)   				# returns the flattened array
 ```
 
 ### 讀取陣列
-NumPy ndarray 可如同 Python lists 串列以索引(index)進行 indexing 和 slicing 並存取元素。<br>
-slice 產生的陣列是原陣列的 view，修改會影響到原陣列。
+NumPy ndarray 可如同 Python lists 串列以索引(index)進行 indexing, slicing, iterating 並存取元素。<br>
+indexing 和 slicing 的方法和 Python lists 相同。但 slicing 產生的陣列是原陣列的 view，修改會影響到原陣列。<br>
+同樣可使用 for 迴圈讀取 NumPy ndarray 中的資料，稱為 iterating (迭代、反覆)。<br>
 
 ```python
 # One-dimensional arrays indexing, slicing
@@ -101,8 +105,9 @@ a[2:5]
 a[0:10:2] = -10  # set every 2nd element to -10
 a[ : :-1]        # reverse 反轉
 ```
+
 ```python
-# Multidimensional arrays
+# Multidimensional arrays indexing, slicing
 import numpy as np
 a = np.arange(20).reshape((5,4))
 print(a)
@@ -112,22 +117,43 @@ print(a[:, 1])    # each row in column 1
 print(a[1:3, :])  # row 1~2
 print(a[-1])      # the last row. Equivalent to a[-1, :]
 ```
+
 ```python
 # A slice of an array is a view into the same data, so modifying it will modify the original array.
 import numpy as np
 a = np.arange(20).reshape((5,4))
 b = a[:2, 1:3]
 print(b)
-b[0, 0] = 99
+b[0, 0] = 99 # 修改 sliced matrix 中的元素
 print(a)
 ```
 
-### 基本運算
-elementwise 的矩陣數學運算及矩陣乘積(matrix product)。<br>
-和 MATLAB 及一般矩陣運算不同，在 NumPy 中 * 是 elementwise multiplication，使用 @ 運算子(python >= 3.5) 和 dot() 才是矩陣乘積(matrix product)。<br>
+```python
+# Iteration over one-dimensional arrays
+import numpy as np
+a = np.arange(10)
+for i in a:
+    print(i)
+```
 
 ```python
-# Elementwise array arithmetic operations
+# Iteration over multidimensional arrays
+import numpy as np
+a = np.arange(20).reshape((5,4))
+for row in a:
+    print(row)
+    
+# 以 flat 屬性將 multidimensional arrays 中的元素逐一取出
+for i in a.flat:
+    print(i)
+```
+
+### 基本運算
+NumPy 中以元素為單位(elementwise)進行處理的運算與函數被稱為 Universal Functions(ufunc, 聚合功能)。<br>
+和 MATLAB 及一般矩陣運算不同，NumPy 中的 * 是 elementwise multiplication 一般乘法；使用 @ 運算子(python >= 3.5) 或 dot() 才是矩陣乘積(matrix product)。<br>
+
+```python
+# Elementwise array arithmetic operations & Universal Functions
 import numpy as np
 a = np.array([[4,4],[2,2]])
 b = np.array([[2,2],[1,1]])
@@ -148,9 +174,28 @@ print(np.multiply(a, b))
 print(a / b)
 print(np.divide(a, b))
 
-10*np.sin(a)
+print(10*np.sin(a))
 
-a<35
+print(np.sqrt(a))
+
+# Logical operation 邏輯運算
+print(a<35)
+```
+
+```python
+# NumPy Universal Functions
+import numpy as np
+a = np.arange(12).reshape((3,4))
+print(a)
+print(a.sum())  # 元素加總
+print(a.max())  # 回傳最大元素
+print(a.min())  # 回傳最小元素
+print(a.argmax())     # 回傳最大元素的索引
+print(a.argmin())     # 回傳最小元素的索引
+print(a.sum(axis=0))  # 以 row 進行加總(column元素)
+print(a.sum(axis=1))  # 以 column 進行加總(row元素)
+print(a.max(axis=0))  # 以 row 回傳最大元素
+print(a.min(axis=1))  # 以 column 回傳最小元素
 ```
 
 ```python
@@ -159,25 +204,15 @@ import numpy as np
 a = np.array([[1,1],[0,1]])
 b = np.array([[2,0],[3,4]])
 print(a * b)        # elementwise product
-print(a @ b)        # matrix product with @
+print(a @ b)        # matrix product
 print(a.dot(b))     # matrix product with dot()
 print(np.dot(a, b)) # matrix product with dot()
-```
-
-```python
-# sum(), max(), min()
-import numpy as np
-a = np.arange(10).reshape((2,5))
-print(a)
-print(a.sum())  # 元素加總
-print(a.max())  # 最大元素
-print(a.min())  # 最小元素
-
 ```
 
 ## References 參考資料
 - NumPy developers documentation-The SciPy community, http://www.numpy.org
 - NumPy Wikipedia, https://en.wikipedia.org/wiki/NumPy
+- Stanford cs213n Python-numpy-tutorial, http://cs231n.github.io/python-numpy-tutorial/
 
 
 
