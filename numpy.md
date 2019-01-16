@@ -67,7 +67,7 @@ print(a3.itemsize)  # the size in bytes of each element --> 8
 **linspace(start,stop,num=50,endpoint=True,retstep)** 在2數間產生指定個數的相同間隔數列：start 為起始值，stop 為終值，num 為數列個數，endpoint 為是否包含終值，預設為 True (包含)，retstep 是否回傳間隔值。<br><br>
 **reshape(a,newshape)** 改變矩陣的 shape 維度：a 為要改變的矩陣，newshape 為改變後的 shape 維度。<br><br>
 **ravel(a)** 攤平矩陣，由多維陣列變一維陣列：a 為要攤平的矩陣。<br><br>
-**transpose(a)** 轉置矩陣：a 為要轉置的矩陣。<br><br>
+**transpose(a)** 轉置矩陣：a 為要轉置的矩陣。<br>
 
 ```python
 import numpy as np
@@ -92,7 +92,7 @@ a18 = np.ravel(a17)   				# returns the flattened array
 ```
 
 ```python
-# transpose matrix 轉置矩陣
+# transposed matrix 轉置矩陣
 import numpy as np
 a = np.arange(6).reshape((3,2))
 print(a)
