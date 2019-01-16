@@ -253,15 +253,12 @@ s_in = np.lexsort((b,a)) # 先 Sort by a 再 by b
 print(s_in)
 ```
 
-**lexsort(keys, axis=-1)** 針對多個排序優先進行排序，並回傳排序後的陣列索引：key 是要排序資料的優先，，axis 可指定排序的axis。<br>
-使用情境如，學生分數資料為第1欄-總分，第2欄-國文分數，第3欄-英文分數，先依總分排序，總分相同者依國文分數排序，再依英文分數排序。<br>
+**partition(a, kth)** 先將陣列排序，比排序後第 k 個元素小的元素放前面，大的放後面，但不依順序回傳陣列：a 是要排序的陣列，kth 是以第k位進行分割。
 
 ```python
-# numpy.lexsort()
-a = [1,5,1,4,3,4,4]      # 第1欄資料
-b = [9,4,0,4,0,2,1]      # 第2欄資料
-s_in = np.lexsort((b,a)) # 先 Sort by a 再 by b
-print(s_in)
+# numpy.partition()
+a = np.array([10, 6, 4, 5, 2, 1, 11, 3])
+np.partition(a, 6)
 ```
 
 ## References 參考資料
