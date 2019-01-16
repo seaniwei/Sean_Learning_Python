@@ -223,7 +223,8 @@ print(np.dot(a, b)) # matrix product with dot()
 
 ### 陣列排序
 NumPy 提供 sort(), argsort(), lexsort(), partition() 等多種排序函數，及不同的排序演算法。<br><br>
-**sort(a,axis,kind)** 回傳排序後的陣列：a 是要排序的陣列，axis 可指定排序的axis，kind 選擇排序演算法，預設為 quicksort(快速排序)。<br>
+**sort(a,axis,kind)** 回傳排序後的陣列：a 是要排序的陣列，axis 可指定排序的axis，kind 選擇排序演算法，預設為 quicksort(快速排序)。
+
 ```python
 # numpy.sort()
 a = np.array([[1,4],[3,2]])
@@ -241,7 +242,27 @@ print(np.sort(x))    # 排序後的陣列
 print(np.argsort(x)) # 排序後的陣列索引
 ```
 
+**lexsort(keys, axis=-1)** 針對多個排序優先進行排序，並回傳排序後的陣列索引：key 是要排序資料的優先，，axis 可指定排序的axis。<br>
+使用情境如，學生分數資料為第1欄-總分，第2欄-國文分數，第3欄-英文分數，先依總分排序，總分相同者依國文分數排序，再依英文分數排序。
 
+```python
+# numpy.lexsort()
+a = [1,5,1,4,3,4,4]      # 第1欄資料
+b = [9,4,0,4,0,2,1]      # 第2欄資料
+s_in = np.lexsort((b,a)) # 先 Sort by a 再 by b
+print(s_in)
+```
+
+**lexsort(keys, axis=-1)** 針對多個排序優先進行排序，並回傳排序後的陣列索引：key 是要排序資料的優先，，axis 可指定排序的axis。<br>
+使用情境如，學生分數資料為第1欄-總分，第2欄-國文分數，第3欄-英文分數，先依總分排序，總分相同者依國文分數排序，再依英文分數排序。<br>
+
+```python
+# numpy.lexsort()
+a = [1,5,1,4,3,4,4]      # 第1欄資料
+b = [9,4,0,4,0,2,1]      # 第2欄資料
+s_in = np.lexsort((b,a)) # 先 Sort by a 再 by b
+print(s_in)
+```
 
 ## References 參考資料
 - NumPy developers documentation-The SciPy community, http://www.numpy.org
