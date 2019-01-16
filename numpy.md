@@ -7,6 +7,8 @@ NumPy (Numerical Python, pronounced /ˈnʌmpaɪ/)：是Python很基礎且重要�
 - 建立陣列
 - 讀取陣列
 - 基本運算
+- 陣列排序
+- 陣列排序
 
 ### NumPy簡介
 - NumPy的核心是 "ndarray" - 多維陣列(multi-dimensional array; n-dimensional)資料型態。
@@ -218,6 +220,28 @@ print(a @ b)        # matrix product
 print(a.dot(b))     # matrix product with dot()
 print(np.dot(a, b)) # matrix product with dot()
 ```
+
+### 陣列排序
+NumPy 提供 sort(), argsort(), lexsort(), partition() 等多種排序函數，及不同的排序演算法。<br><br>
+**numpy.sort(a,axis,kind)** 回傳排序後的陣列：a 是要排序的陣列，axis 可指定排序的axis，kind 選擇排序演算法，預設為 quicksort(快速排序)。<br>
+```python
+# numpy.sort()
+a = np.array([[1,4],[3,2]])
+print(a)
+print(np.sort(a))         # 不指定 axis，預設為最後的 axis(此例同axis=1)
+print(np.sort(a, axis=0)) # 對第1個 axis 進行 sort
+```
+
+**numpy.sort(a,axis,kind)** 回傳排序後的陣列：a 是要排序的陣列，axis 可指定排序的axis，kind 選擇排序演算法，預設為 quicksort(快速排序)。
+```python
+# numpy.sort()
+a = np.array([[1,4],[3,2]])
+print(a)
+print(np.sort(a))         # 不指定 axis，預設為最後的 axis(此例同axis=1)
+print(np.sort(a, axis=0)) # 對第1個 axis 進行 sort
+```
+
+
 
 ## References 參考資料
 - NumPy developers documentation-The SciPy community, http://www.numpy.org
