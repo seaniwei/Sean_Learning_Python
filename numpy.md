@@ -222,7 +222,7 @@ print(np.dot(a, b)) # matrix product with dot()
 ```
 
 ### 陣列排序
-NumPy 提供 sort(), argsort(), lexsort(), partition() 等多種排序函數，及不同的排序演算法。<br><br>
+NumPy 提供 sort(), argsort(), lexsort(), partition() 等多種排序函數，及不同的排序演算法選擇。<br><br>
 **sort(a,axis,kind)** 回傳排序後的陣列：a 是要排序的陣列，axis 可指定排序的axis，kind 選擇排序演算法，預設為 quicksort(快速排序)。
 
 ```python
