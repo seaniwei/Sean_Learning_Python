@@ -298,6 +298,41 @@ print(np.concatenate((d,c), axis=1))
 [66,84,89,69,72]]<br>
 以這個成績矩陣來進行運算。<br>
 
+```python
+# NumPy example
+import numpy as np
+score = np.array([[85,90,83,74,91],
+[64,82,73,89,81],
+[85,65,83,88,63],
+[92,92,76,72,82],
+[72,91,83,92,76],
+[83,92,79,87,83],
+[66,84,89,69,72]])
+
+# Origin score matrix
+print(score)
+
+# 各學生的總分
+s_sum = score.sum(axis=1)
+print("學生總分:",s_sum)
+
+# 各學科的總分
+c_sum = score.sum(axis=0)
+print("各科總分:",c_sum)
+
+new_score = np.vstack((score,c_sum))
+print("加上學生各科總分:",new_score)
+
+new_score1 = np.hstack((score,s_sum[:,np.newaxis]))
+print("加上學生總分:",new_score1)
+
+# slice 總分資料 new_score1[:,-1]
+# slice 國文分數 new_score1[:,0]
+
+s_in = np.lexsort((new_score1[:,0],new_score1[:,-1])) # 先 Sort by a 再 by b
+print("學生排名:",s_in)
+```
+
 ## References 參考資料
 - NumPy developers documentation-The SciPy community, http://www.numpy.org
 - NumPy Wikipedia, https://en.wikipedia.org/wiki/NumPy
