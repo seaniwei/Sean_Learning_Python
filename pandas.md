@@ -37,6 +37,7 @@ print('ironman.index------->',ironman.index)
 
 ## References 參考資料
 - Pandas 官方網站, http://pandas.pydata.org/
+- python 入門到分析股市, https://ithelp.ithome.com.tw/users/20111390/ironman/1791
 - [Day10]Learning Pandas - Series、DataFrame、Index, https://ithelp.ithome.com.tw/articles/10204656
 
 
