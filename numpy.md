@@ -285,6 +285,19 @@ print(np.hstack((a,b)))
 print(np.hstack((d,c)))
 print(np.concatenate((d,c), axis=1))
 ```
+
+### 範例
+我們有一個學生的成績資料如下：<br>
+國文，英文，數學，歷史，地理<br>
+[[85,90,83,74,91],<br>
+[64,82,73,89,81],<br>
+[85,65,83,88,63],<br>
+[92,92,63,72,82],<br>
+[72,91,83,92,76],<br>
+[83,92,79,87,83],<br>
+[66,84,89,69,72]]<br>
+以這個成績矩陣來進行運算。<br>
+
 ## References 參考資料
 - NumPy developers documentation-The SciPy community, http://www.numpy.org
 - NumPy Wikipedia, https://en.wikipedia.org/wiki/NumPy
